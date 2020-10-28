@@ -5,8 +5,8 @@ import ReactDOM from 'react-dom';
 
 document.addEventListener("DOMContentLoaded", function() {
     const root = document.getElementById("root");
-    const game = new Game(root)
+    const game = new Game()
     game.runGame()
 
-    ReactDOM.render(game, root)
+    ReactDOM.render(<game/>, root)  
 })
