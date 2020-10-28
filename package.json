@@ -1,41 +1,47 @@
 {
   "name": "CrazyQuestions",
+  "private": true,
+  "dependencies": {
+    "@babel/core": "^7.11.6",
+    "@babel/preset-env": "^7.11.5",
+    "@babel/preset-react": "^7.10.4",
+    "babel-loader": "^8.1.0",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-redux": "^7.2.1",
+    "react-router-dom": "^5.2.0",
+    "redux": "^4.0.5",
+    "redux-devtools-extension": "^2.13.8",
+    "redux-logger": "^3.0.6",
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12"
+  },
+  "description": "This README would normally document whatever steps are necessary to get the application up and running.",
   "version": "1.0.0",
-  "description": "Crazy Questios",
   "main": "index.js",
-  "browserslist": [
-    "last 1 version",
-    "> 1%",
-    "maintained node versions",
-    "not dead"
-  ],
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
   "scripts": {
-    "start": "webpack-dev-server --config webpack.dev.js",
-    "webpack:watch": "webpack --watch --config webpack.dev.js",
-    "webpack:build": "webpack --config webpack.prod.js  --optimize-minimize"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack -w --mode=development",
+    "webpack": "webpack",
+    "postinstall": "webpack"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Bman2386/crazyquestions"
+    "url": "git+https://github.com/Bman2386/crazyquestions.git"
   },
-  "author": "Brendon Biagi",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Bman2386/crazyquestions"
+    "url": "https://github.com/Bman2386/crazyquestions/issues"
   },
-  "devDependencies": {
-    "@babel/core": "^7.9.0",
-    "@babel/preset-env": "^7.9.5",
-    "babel-loader": "^8.1.0",
-    "url-loader": "^4.1.0",
-    "webpack": "^4.43.0",
-    "webpack-cli": "^3.3.11",
-    "webpack-dev-server": "^3.10.3",
-    "webpack-merge": "^4.2.2"
-  },
-  "dependencies": {
-    "autoprefixer": "^10.0.1",
-    "file-loader": "^6.1.1",
-    "mini-css-extract-plugin": "^1.0.0",
-    "postcss": "^8.1.1"
+  "homepage": "https://github.com/Bman2386/crazyquestions#readme",
+  "engines": {
+    "node": "10.13.0",
+    "npm": "6.4.1"
   }
 }
