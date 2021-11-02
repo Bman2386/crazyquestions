@@ -6,6 +6,11 @@ class Api::QuestionsController < ApplicationController
         render :show
     end
 
+    def index
+        @question = Question.all 
+        render :index
+    end
+
     def show
         @question = Question.find(params[:id])
         render :show
