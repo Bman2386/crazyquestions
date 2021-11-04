@@ -1,12 +1,19 @@
-import Game from './game.jsx';
 import React from 'react';
 import ReactDOM from 'react-dom';
-// import Root from './root'
+import createStore from './store/store';
+import Root from './components/root';
 
-document.addEventListener("DOMContentLoaded", function() {
-    const root = document.getElementById("root");
-    const game = new Game()
-    game.runGame()
+document.addEventListener('DOMContentLoaded', () => {
+    const root = document.getElementById('root');
+    let preloadedState = undefined;
+    if (window.currentUser) {
+        preloadedState = {
+            session: {
+                currentUser: window.currentUser
+            }
+        };
+    }
+    const store = createStore(preloadedState);
 
-    ReactDOM.render(<game/>, root)  
+    ReactDOM.render(<Root store={store} />, root);
 })
