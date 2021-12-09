@@ -29,11 +29,26 @@ export const receiveErrors = errors => {
     }
 };
 
-export const createNewUser = formUser => dispatch => postUser(formUser)
-    .then(user => dispatch(receiveCurrentUser(user)), err => {
+// export const createNewUser = formUser => dispatch => postUser(formUser)
+//     .then(user => dispatch(receiveCurrentUser(user)), err => {
 
+//         return dispatch(receiveErrors(err.responseJSON))
+//     });
+export async function createNewUser(formUser) {
+    try {
+        const post = await dispatch(() => {
+        postUser(formUser)
+        })
+        const getUser = await dispatch(user => {
+            receiveCurrentUser(user)
+        })
+        post()
+        getUser()
+    }
+    catch {
         return dispatch(receiveErrors(err.responseJSON))
-    });
+    }
+}
 
 export const login = formUser => dispatch => postSession(formUser)
     .then(user => dispatch(receiveCurrentUser(user)), err => (
