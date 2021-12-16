@@ -4,13 +4,15 @@ import { AuthRoute, ProtectedRoute } from '../utils/route_util';
 import navBarContainer from './navbar/navbarContainer';
 import homeContainer from './home/homeContainer';
 import profileContainer from './profile/profileContainer';
-//make  game, and game-boards
+import gameContainer from './game/gameContainer';
+// make login
 export default () => {
     return (
         <div>
             <Route path="/" component={navBarContainer} />
             <Route exact path="/" component={homeContainer} />
             <ProtectedRoute path='/profile' component={profileContainer} />
+            <ProtectedRoute path='/game' component={gameContainer} />
         </div>
     )
 };
