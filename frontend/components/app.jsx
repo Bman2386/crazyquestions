@@ -6,7 +6,7 @@ import homeContainer from './home/homeContainer';
 import profileContainer from './profile/profileContainer';
 import gameContainer from './game/gameContainer';
 import loginContainer from './session/loginContainer';
-// make login
+
 export default () => {
     return (
         <div>
