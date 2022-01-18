@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 
-export const Login = ({create, login}) => {
+const Login = ({create, login}) => {
     const [userName, setUserName] = useState('');
     const [password, setPassword] = useState('');
     const [confirm, setConfirm] = useState('');
@@ -50,4 +50,5 @@ export const Login = ({create, login}) => {
     );
 };
 
+export default Login
 //still needs error handling and testing
