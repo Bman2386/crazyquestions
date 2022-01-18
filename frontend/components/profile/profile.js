@@ -1,7 +1,9 @@
 import React from 'react';
 
-export const Profile = (props) => {
+const Profile = (props) => {
     return (
         <div>Profiler</div>
     )
 }
+
+export default Profile

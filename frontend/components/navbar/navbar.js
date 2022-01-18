@@ -1,8 +1,10 @@
-
 import React from 'react';
 
-export const Navbar = (props) => {
+const Navbar = (props) => {
+    debugger
     return (
         <div>Navbar</div>
     )
 }
+
+export default Navbar

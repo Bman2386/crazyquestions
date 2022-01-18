@@ -3,6 +3,7 @@ import NavBar from './navbar';
 
 
 const mapStateToProps = (state) => {
+    debugger
     return {
         
     }
