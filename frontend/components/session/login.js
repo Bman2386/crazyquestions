@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 
 const Login = ({create, login}) => {
+
     const [userName, setUserName] = useState('');
     const [password, setPassword] = useState('');
     const [confirm, setConfirm] = useState('');
@@ -8,10 +9,12 @@ const Login = ({create, login}) => {
 
 
     const createAccount = () => {
+       
         const newUser = {
-            userName: userName,
+            username: userName,
             password: password
         }
+        // fix backend
         create(newUser)
     }
 
@@ -26,21 +29,24 @@ const Login = ({create, login}) => {
         <div>
             <h1>Login Page</h1>
             <input 
+            type='text'
             placeholder='User Name'
             value={userName}
-            onChange={() => setUserName()}
+            onChange={(e) => setUserName(e.target.value)}
             />
             <input 
+            type='text'
             placeholder='Password'
             value={password}
-            onChange={() => setPassword()}
+            onChange={(e) => setPassword(e.target.value)}
             />
             {changeForm ? <button onClick={() => loginUser()}>Login</button> : 
             <div>
             <input
+            type='text'
             placeholder='Confirm Password'
             value={confirm}
-            onChange={() => setConfirm()}
+            onChange={(e) => setConfirm(e.target.value)}
             />
             <button onClick={() => createAccount()}>Create Account</button>
             <button onClick={() => setChangeForm(true)}>Already Have an Account?</button>    

@@ -34,19 +34,14 @@ export const receiveErrors = errors => {
 
 //         return dispatch(receiveErrors(err.responseJSON))
 //     });
-export async function createNewUser(formUser) {
+export const createNewUser = formUser => async dispatch => {
+    console.log('called')
+    debugger
     try {
-        const post = await dispatch(() => {
-        postUser(formUser)
-        })
-        const getUser = await dispatch(user => {
-            receiveCurrentUser(user)
-        })
-        post()
-        getUser()
-    }
-    catch {
-        return dispatch(receiveErrors(err.responseJSON))
+        const res = await postUser(formUser)
+        dispatch(receiveCurrentUser(res))
+    } catch (error) {
+        dispatch(receiveErrors(error.responseJSON));
     }
 }
 

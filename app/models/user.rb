@@ -14,8 +14,8 @@ class User < ApplicationRecord
     has_many :answers,
         foreign_key: :user_id
 
-    belongs_to :game,
-        foreign_key :user_id
+    has_many :games,
+        foreign_key: :game_id
 
      def self.find_by_credentials(username, password)
         user = User.find_by( username: username)
