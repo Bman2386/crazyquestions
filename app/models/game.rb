@@ -1,6 +1,6 @@
 class Game < ApplicationRecord
 
-    has_many :users,
+    belongs_to :users,
         foreign_key: :user_id
 
     has_many :questions,
