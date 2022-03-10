@@ -29,14 +29,9 @@ export const receiveErrors = errors => {
     }
 };
 
-// export const createNewUser = formUser => dispatch => postUser(formUser)
-//     .then(user => dispatch(receiveCurrentUser(user)), err => {
 
-//         return dispatch(receiveErrors(err.responseJSON))
-//     });
 export const createNewUser = formUser => async dispatch => {
-    console.log('called')
-    debugger
+    
     try {
         const res = await postUser(formUser)
         dispatch(receiveCurrentUser(res))
