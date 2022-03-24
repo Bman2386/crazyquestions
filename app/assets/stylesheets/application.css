@@ -22,11 +22,23 @@ header, footer, nav, ul, li, button, img, input, a {
     margin: 0;
     font-family: inherit;
     border: 0;
-    color: rgb(81, 182, 81);
+    color: black;
     background-color: white;
     font-size: medium;
     font-family: Arial, sans-serif;
     font-weight: 300;
     list-style: none;
     text-decoration: none;
+}
+
+button {
+    background-color: blue;
+    color: white;
+    border-radius: 1rem;
+    padding: 1rem;
+}
+
+button:hover {
+    background-color: aqua;
+    cursor: pointer;
 }
