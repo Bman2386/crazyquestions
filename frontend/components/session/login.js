@@ -5,7 +5,7 @@ const Login = ({create, login}) => {
     const [userName, setUserName] = useState('');
     const [password, setPassword] = useState('');
     const [confirm, setConfirm] = useState('');
-    const [changeForm, setChangeForm] = useState(false);
+    const [changeForm, setChangeForm] = useState(false); // state used to manage form types
 
 
     const createAccount = () => {
@@ -40,7 +40,10 @@ const Login = ({create, login}) => {
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             />
-            {changeForm ? <button onClick={() => loginUser()}>Login</button> : 
+            {changeForm ? <div> 
+                <button onClick={() => loginUser()}>Login</button> 
+                <button onClick={()=> setChangeForm(false)}>Create an account?</button>
+                </div> : 
             <div>
             <input
             type='text'
