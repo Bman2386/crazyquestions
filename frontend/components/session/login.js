@@ -40,10 +40,11 @@ const Login = ({create, login}) => {
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             />
-            {changeForm ? <div> 
+            {changeForm ? 
+            <div> 
                 <button onClick={() => loginUser()}>Login</button> 
                 <button onClick={()=> setChangeForm(false)}>Create an account?</button>
-                </div> : 
+            </div> : 
             <div>
             <input
             type='text'
