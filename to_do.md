@@ -8,6 +8,6 @@
 - question history needs to exist []
 
 # Other:
-- Need go to sign in from login []
+- Need go to sign in from login [check]
 
 
