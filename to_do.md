@@ -3,7 +3,7 @@
 - style splash, lobby, & Game []
 
 # Make app function:
-- Players need to CRUD for games []
+- Players need to CRUD for games [started]
 - Game should function as loaded questions []
 - question history needs to exist []
 
