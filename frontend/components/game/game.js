@@ -1,4 +1,5 @@
 import React from 'react';
+import gameInstance from gameInstance.js;
 
 const Game = (props) => {
 
